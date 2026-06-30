@@ -17,9 +17,9 @@
         <label>Mensaje: <textarea name="mensaje" rows="4" cols="40"></textarea></label><br><br>
         <button type="submit">Enviar</button>
     </form>
-    {% if nombre and mensaje %}
-        <div style="border:1px solid #ccc;padding:10px;margin-top:15px;background:#f9f9f9;">
-            <strong>Tu mensaje fue enviado:</strong><br>
+    {% if enviado %}
+        <div style="border:1px solid #0a0;padding:10px;margin-top:15px;background:#efe;">
+            <strong>✓ Mensaje guardado en la base de datos</strong><br>
             Nombre: {{ nombre|safe }}<br>
             Mensaje: {{ mensaje|safe }}<br>
             <small>IP: {{ request_ip }} | Ruta del script: {{ script_path }}</small>
